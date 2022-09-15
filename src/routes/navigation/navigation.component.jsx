@@ -1,10 +1,11 @@
 import "./navigation.styles.scss";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { ReactComponent as Pagelogo } from "../../assets/shared/logo.svg";
 import { useContext, useEffect, Fragment, useState } from "react";
 import { ScreenContext } from "../../context/screensize.context";
 import { ReactComponent as Hamburger } from "../../assets/shared/icon-hamburger.svg";
 import { ReactComponent as CloseIcon } from "../../assets/shared/icon-close.svg";
+
 const Navigation = () => {
   const { screenSize } = useContext(ScreenContext);
   const [showLinks, setShowlinks] = useState(false);
@@ -12,10 +13,15 @@ const Navigation = () => {
     setShowlinks(!showLinks);
   };
 
+  const navigate = useNavigate();
+  const HomeNavigate = () => {
+    navigate("/");
+  };
+
   return (
     <Fragment>
       <div className="navigation-container">
-        <Pagelogo />
+        <Pagelogo onClick={HomeNavigate} />
         {screenSize >= 768 && <hr />}
         <section>
           {screenSize <= 480 &&
@@ -34,9 +40,7 @@ const Navigation = () => {
                 screenSize <= 768 && "displaynone"
               }`}
             />
-            <Link to="/" className="linkRoute">
-              <span id="link-span">00</span> Home
-            </Link>
+
             <Link to="/destination" className="linkRoute">
               <span id="link-span">01</span> Destination
             </Link>

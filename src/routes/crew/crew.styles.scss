@@ -6,12 +6,12 @@
   background-repeat: no-repeat;
   height: 100vh;
   display: grid;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: 40% 50%;
   grid-template-rows: 10% 70%;
   column-gap: 2%;
   align-content: flex-end;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
   & > h2 {
     grid-column: span 2;
     font-weight: 400;
@@ -31,7 +31,7 @@
 
 @media only screen and (max-width: 768px) {
   .crew-container {
-    height: 80rem;
+    height: 72rem;
     display: flex;
     flex-direction: column;
     padding-top: 5rem;
@@ -48,9 +48,9 @@
     }
     & > .crew-img {
       order: 0;
-      margin: 2rem 0;
+      margin: 2rem 0 2em 0;
       img {
-        width: 25rem;
+        width: 22rem;
       }
     }
   }

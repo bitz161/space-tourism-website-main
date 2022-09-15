@@ -1,6 +1,10 @@
 import "./crew-content.styles.scss";
 
-const CrewContent = ({ crewDetails, setCrewCount }) => {
+const BackgroundC = {
+  backgroundColor: "white",
+};
+
+const CrewContent = ({ crewDetails, setCrewCount, crewNumber, crew }) => {
   const { name, role, bio } = crewDetails;
   return (
     <div className="crew-content-container">
@@ -10,10 +14,13 @@ const CrewContent = ({ crewDetails, setCrewCount }) => {
         <p>{bio}</p>
       </div>
       <div className="crew-options">
-        <div onClick={() => setCrewCount(0)}></div>
-        <div onClick={() => setCrewCount(1)}></div>
-        <div onClick={() => setCrewCount(2)}></div>
-        <div onClick={() => setCrewCount(3)}></div>
+        {crew.map((data, idx) => (
+          <div
+            key={idx}
+            onClick={() => setCrewCount(idx)}
+            className={crewNumber === idx ? "backgroundC" : ""}
+          />
+        ))}
       </div>
     </div>
   );

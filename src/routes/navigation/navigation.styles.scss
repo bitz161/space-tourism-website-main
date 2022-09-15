@@ -59,6 +59,13 @@
   }
 }
 
+//for tablet
+@media only screen and (max-width: 768px) {
+  #link-span {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .navigation-container {
     width: 100%;
@@ -82,12 +89,5 @@
         }
       }
     }
-  }
-}
-
-//for tablet
-@media only screen and (max-width: 768px) {
-  #link-span {
-    display: none;
   }
 }

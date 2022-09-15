@@ -30,7 +30,12 @@ const Crew = () => {
       <h2>
         <span>02</span> Meet your crew
       </h2>
-      <CrewContent crewDetails={crew[crewNumber]} setCrewCount={setCrewCount} />
+      <CrewContent
+        crewDetails={crew[crewNumber]}
+        setCrewCount={setCrewCount}
+        crewNumber={crewNumber}
+        crew={crew}
+      />
       <div className="crew-img">
         <img
           src={screenSize >= 480 ? crewPNG[crewNumber] : crewWEBP[crewNumber]}

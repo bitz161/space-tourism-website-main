@@ -5,6 +5,7 @@ const TechnologyContent = ({ technologyData }) => {
   const { name, description } = technologyData;
   return (
     <Fragment>
+      <p>The Terminology...</p>
       <div>{name}</div>
       <div>{description}</div>
     </Fragment>

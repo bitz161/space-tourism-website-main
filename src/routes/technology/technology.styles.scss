@@ -1,0 +1,118 @@
+.tech-container {
+  width: 100%;
+  color: white;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  padding-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  & > div {
+    width: 90%;
+    height: 2rem;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    span {
+      color: gray;
+      margin-right: 10px;
+    }
+  }
+  & > section {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    .tech-options {
+      width: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      button {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        font-size: 30px;
+        border: 1px solid gray;
+        background: transparent;
+        color: white;
+      }
+      button.techButtonColor {
+        color: black;
+        background-color: white;
+      }
+      button:nth-of-type(2) {
+        margin: 2rem 0;
+      }
+    }
+    .tech-img {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//for tablet
+@media only screen and (max-width: 768px) {
+  .tech-container {
+    height: 130vh;
+    & > div {
+      width: 100%;
+      text-align: center;
+      span {
+        display: none;
+      }
+    }
+    & > section {
+      width: 100%;
+      flex-direction: column;
+      .tech-options {
+        flex-direction: row;
+        width: 100%;
+
+        button:nth-of-type(2) {
+          margin: 1rem 2rem;
+        }
+      }
+      .tech-details-container {
+        width: 100%;
+        margin: 2rem 0;
+        text-align: center;
+      }
+      .tech-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 80%;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .tech-container {
+    height: 100vh;
+    padding-top: 9rem;
+    & > div {
+      span {
+      }
+    }
+    & > section {
+      .tech-options {
+        button:nth-of-type(2) {
+        }
+      }
+      .tech-img {
+        img {
+          width: 100%;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
