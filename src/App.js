@@ -8,7 +8,7 @@ import Technology from "./routes/technology/technology.component";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigation />}>
+      <Route path="space-tourism-website-main/" element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path="destination" element={<Destination />} />
         <Route path="crew" element={<Crew />} />
