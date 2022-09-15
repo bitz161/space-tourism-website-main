@@ -9,7 +9,7 @@ const Home = () => {
   const { screenSize } = useContext(ScreenContext);
   const navigate = useNavigate();
   const ExploreSpace = () => {
-    navigate("space-tourism-website-main/destination");
+    navigate("/space-tourism-website-main/destination");
   };
 
   const BackgroundImage = {

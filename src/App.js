@@ -10,15 +10,9 @@ function App() {
     <Routes>
       <Route path="space-tourism-website-main/" element={<Navigation />}>
         <Route index element={<Home />} />
-        <Route
-          path="space-tourism-website-main/destination"
-          element={<Destination />}
-        />
-        <Route path="space-tourism-website-main/crew" element={<Crew />} />
-        <Route
-          path="space-tourism-website-main/technology"
-          element={<Technology />}
-        />
+        <Route path="destination" element={<Destination />} />
+        <Route path="crew" element={<Crew />} />
+        <Route path="technology" element={<Technology />} />
       </Route>
     </Routes>
   );

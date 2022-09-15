@@ -15,7 +15,7 @@ const Navigation = () => {
 
   const navigate = useNavigate();
   const HomeNavigate = () => {
-    navigate("space-tourism-website-main/");
+    navigate("");
   };
 
   return (
@@ -41,13 +41,13 @@ const Navigation = () => {
               }`}
             />
 
-            <Link to="/destination" className="linkRoute">
+            <Link to="destination" className="linkRoute">
               <span id="link-span">01</span> Destination
             </Link>
-            <Link to="/crew" className="linkRoute">
+            <Link to="crew" className="linkRoute">
               <span id="link-span">02</span> Crew
             </Link>
-            <Link to="/technology" className="linkRoute">
+            <Link to="technology" className="linkRoute">
               <span id="link-span">03</span> Technology
             </Link>
           </div>
