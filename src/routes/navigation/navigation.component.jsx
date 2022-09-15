@@ -15,7 +15,7 @@ const Navigation = () => {
 
   const navigate = useNavigate();
   const HomeNavigate = () => {
-    navigate("/");
+    navigate("space-tourism-website-main/");
   };
 
   return (
